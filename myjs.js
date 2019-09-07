@@ -40,4 +40,60 @@ function multiply(arrayNumbers2) {
     }
     return temp;
 }
+//Question 6
+function reverse2(stringToReverse) {
+    let reversedString = "";
+    for (let i = stringToReverse.length-1; i >= 0 ; i--){
+        reversedString += stringToReverse.charAt(i);
+    }
+    return reversedString;
+}
+//Question 7
+function findLongestWord(arrayOfWords) {
+    if (arrayOfWords.length < 1 ) return "Enter array of words, please";
+
+    let largest = arrayOfWords[0].length;
+    for (let i = 0; i < arrayOfWords.length; i++){
+        if (arrayOfWords[i].length > largest)
+            largest = arrayOfWords[i].length;
+    }
+    return largest;
+}
+
+//Question 8
+function filterLongWords(arrayWords, i) {
+    let largerWords = [];
+    for (let j = 0; j < arrayWords.length; j++){
+        if (arrayWords[j].length > i)
+            largerWords.push(arrayWords[j]);
+    }
+    return largerWords;
+}
+
+//Question 9
+function mapFunction() {
+    const a = [1,3,5,3,3];
+    // const b = a.map(function(elem, i, array) {
+    //     return elem * 10;
+    // });
+    return a.map(function(elem, i, array) {
+        return elem * 10;
+    });
+}
+function filterFunction() {
+    const aa = [1,3,5,3,3];
+    // const c = aa.filter(function(elem, i, array){
+    //     return elem === 3;});
+    return aa.filter(function(elem, i, array){
+        return elem === 3;});
+}
+function reduceFunction() {
+    const aaa = [1,3,5,3,3];
+    // const d = aaa.reduce(function(prevValue, elem, i, array){
+    //     return prevValue * elem;
+    // });
+    return aaa.reduce(function(prevValue, elem, i, array){
+        return prevValue * elem;
+    });
+}
 
