@@ -107,16 +107,37 @@ function findLongestWord(arrayOfWords) {
     }
     return largest;
 }
+function findLongestWordTest(expected, result) {
+    if (expected === result) {
+        return "TEST SUCCEEDED";
+    } else {
+        return "TEST FAILED.  Expected " + expected + " found " + result;
+    }
+}
+console.log("Expected output of findLongestWord([\"abebe\", \"beso\", \"bela\"]) is 5  " +
+    findLongestWordTest(5, findLongestWord(["abebe", "beso", "bela"])));
 
 //Question 8
-function filterLongWords(arrayWords, i) {
+function filterLongWords(wordsArray, i) {
     let largerWords = [];
-    for (let j = 0; j < arrayWords.length; j++){
-        if (arrayWords[j].length > i)
-            largerWords.push(arrayWords[j]);
+    for (let j = 0; j < wordsArray.length; j++){
+        if (wordsArray[j].length > i)
+            largerWords.push(wordsArray[j]);
     }
     return largerWords;
 }
+function filterLongWordsTest(expected, result) {
+    if (expected.length !== result.length)
+        return "TEST FAILED. Their lengths are not equal!";
+    for(let i = 0; i < expected. length; i++){
+        if(expected[i] !== result[i])
+            return "TEST FAILED.  Expected " + expected + " found " + result;
+    }
+
+    return "TEST SUCCEEDED";
+}
+console.log("Expected output of filterLongWords([\"abebe\", \"besoena\", \"bel\", 3], ) is [\"abebe\", \"besoena\"]  " +
+    filterLongWordsTest(["abebe", "besoena"], filterLongWords(["abebe", "besoena", "bela"], 3)));
 
 //Question 9
 function mapFunction() {
