@@ -150,6 +150,18 @@ function mapFunction() {
         return elem * 10;
     });
 }
+function mapFunctionTest(expected, result) {
+    if (expected.length !== result.length)
+        return "TEST FAILED. Their lengths are not equal!";
+    for(let i = 0; i < expected. length; i++){
+        if(expected[i] !== result[i])
+            return "TEST FAILED.  Expected " + expected + " found " + result;
+    }
+
+    return "TEST SUCCEEDED";
+}
+console.log("Expected output of mapFunction() is 10,30,50,30,30 " + mapFunctionTest([10,30,50,30,30], mapFunction()));
+
 function filterFunction() {
     const aa = [1,3,5,3,3];
     // const c = aa.filter(function(elem, i, array){
@@ -157,6 +169,18 @@ function filterFunction() {
     return aa.filter(function(elem, i, array){
         return elem === 3;});
 }
+function filterFunctionTest(expected, result) {
+    if (expected.length !== result.length)
+        return "TEST FAILED. Their lengths are not equal!";
+    for(let i = 0; i < expected. length; i++){
+        if(expected[i] !== result[i])
+            return "TEST FAILED.  Expected " + expected + " found " + result;
+    }
+
+    return "TEST SUCCEEDED";
+}
+console.log("Expected output of filterFunction() is 3,3,3 " + filterFunctionTest([3,3,3], filterFunction()));
+
 function reduceFunction() {
     const aaa = [1,3,5,3,3];
     // const d = aaa.reduce(function(prevValue, elem, i, array){
@@ -166,4 +190,12 @@ function reduceFunction() {
         return prevValue * elem;
     });
 }
+function reduceFunctionTest(expected, result) {
+    if (expected === result) {
+        return "TEST SUCCEEDED";
+    } else {
+        return "TEST FAILED.  Expected " + expected + " found " + result;
+    }
+}
+console.log("Expected output of reduceFunction() is 135 " + reduceFunctionTest(135, reduceFunction()));
 
