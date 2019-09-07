@@ -26,10 +26,10 @@ function maxOfThreeTest(expected, result) {
         return "TEST FAILED.  Expected " + expected + " found " + result;
     }
 }
-    console.log("Expected output of max(23, 106, 89) is 106  " + maxOfThreeTest(106, maxOfThree(23, 106, 89)));
+    console.log("Expected output of maxOfThree(23, 106, 89) is 106  " + maxOfThreeTest(106, maxOfThree(23, 106, 89)));
 //Question 4
 function isVowel(letter) {
-    let vowels = [A, E, I, O, U, a, e, i, o, u];
+    let vowels = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"];
     if(letter.length !== 1)
         return "Enter a letter, please";
     return vowels.includes(letter);
@@ -41,29 +41,45 @@ function isVowelTest(expected, result) {
         return "TEST FAILED.  Expected " + expected + " found " + result;
     }
 }
-    console.log("Expected output of max(D) is false  " + isVowelTest(false, isVowel("D")));
+    console.log("Expected output of isVowel(D) is false  " + isVowelTest(false, isVowel("D")));
 //Question 5 sum
 function sum(arrayNumbers) {
     let temp = 0;
     if(arrayNumbers.length < 1) return "Enter arrays of numbers";
 
     for (let i = 0; i < arrayNumbers.length; i++){
-        temp += i;
+        temp += arrayNumbers[i];
     }
     return temp;
 }
+function sumTest(expected, result) {
+    if (expected === result) {
+        return "TEST SUCCEEDED";
+    } else {
+        return "TEST FAILED.  Expected " + expected + " found " + result;
+    }
+}
+console.log("Expected output of sum([23, 27]) is 50  " + sumTest(50, sum([23, 27])));
 //Question 5 multiply
 function multiply(arrayNumbers2) {
-    let temp = 0;
+    let temp = 1;
     if(arrayNumbers2.length < 1) return "Enter arrays of numbers";
 
     if(arrayNumbers2.length < 1) return "Enter arrays of numbers";
 
     for (let i = 0; i < arrayNumbers2.length; i++){
-        temp *= i;
+        temp *= arrayNumbers2[i];
     }
     return temp;
 }
+function multiplyTest(expected, result) {
+    if (expected === result) {
+        return "TEST SUCCEEDED";
+    } else {
+        return "TEST FAILED.  Expected " + expected + " found " + result;
+    }
+}
+console.log("Expected output of multiply([23, 27]) is 621  " + multiplyTest(621, multiply([23, 27])));
 //Question 6
 function reverse2(stringToReverse) {
     let reversedString = "";
@@ -72,6 +88,14 @@ function reverse2(stringToReverse) {
     }
     return reversedString;
 }
+function reverse2Test(expected, result) {
+    if (expected === result) {
+        return "TEST SUCCEEDED";
+    } else {
+        return "TEST FAILED.  Expected " + expected + " found " + result;
+    }
+}
+console.log("Expected output of reverse2(\"abebe beso\") is oseb ebeba  " + reverse2Test("oseb ebeba", reverse2("abebe beso")));
 //Question 7
 function findLongestWord(arrayOfWords) {
     if (arrayOfWords.length < 1 ) return "Enter array of words, please";
