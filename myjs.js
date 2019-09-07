@@ -124,6 +124,7 @@ function filterLongWords(wordsArray, i) {
         if (wordsArray[j].length > i)
             largerWords.push(wordsArray[j]);
     }
+    console.log(largerWords);
     return largerWords;
 }
 function filterLongWordsTest(expected, result) {
@@ -137,7 +138,7 @@ function filterLongWordsTest(expected, result) {
     return "TEST SUCCEEDED";
 }
 console.log("Expected output of filterLongWords([\"abebe\", \"besoena\", \"bel\", 3], ) is [\"abebe\", \"besoena\"]  " +
-    filterLongWordsTest(["abebe", "besoena"], filterLongWords(["abebe", "besoena", "bela"], 3)));
+    filterLongWordsTest(["abebe", "besoena"], filterLongWords(["abebe", "besoena", "bel"], 3)));
 
 //Question 9
 function mapFunction() {
