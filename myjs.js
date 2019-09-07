@@ -124,7 +124,6 @@ function filterLongWords(wordsArray, i) {
         if (wordsArray[j].length > i)
             largerWords.push(wordsArray[j]);
     }
-    console.log(largerWords);
     return largerWords;
 }
 function filterLongWordsTest(expected, result) {
