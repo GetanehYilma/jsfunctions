@@ -26,7 +26,7 @@ function maxOfThreeTest(expected, result) {
         return "TEST FAILED.  Expected " + expected + " found " + result;
     }
 }
-    console.log("Expected output of max(23, 106, 89) is 106  " + maxTest(106, maxOfThree(23, 106, 89)));
+    console.log("Expected output of max(23, 106, 89) is 106  " + maxOfThreeTest(106, maxOfThree(23, 106, 89)));
 //Question 4
 function isVowel(letter) {
     let vowels = [A, E, I, O, U, a, e, i, o, u];
@@ -34,6 +34,14 @@ function isVowel(letter) {
         return "Enter a letter, please";
     return vowels.includes(letter);
 }
+function isVowelTest(expected, result) {
+    if (expected === result) {
+        return "TEST SUCCEEDED";
+    } else {
+        return "TEST FAILED.  Expected " + expected + " found " + result;
+    }
+}
+    console.log("Expected output of max(D) is false  " + isVowelTest(false, isVowel("D")));
 //Question 5 sum
 function sum(arrayNumbers) {
     let temp = 0;
