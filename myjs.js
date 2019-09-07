@@ -1,16 +1,32 @@
 //Question 2
-function max(num1, num2) {
+function max(num1, num2){
     if (num1 > num2)
         return num1;
     else
         return num2;
-
 }
+function maxTest(expected, result) {
+    if (expected === result) {
+        return "TEST SUCCEEDED";
+    } else {
+        return "TEST FAILED.  Expected " + expected + " found " + result;
+    }
+}
+    console.log("Expected output of max(23, 89) is 89  " + maxTest(89, max(23, 89)));
+
 //Question 3
 function maxOfThree(num1, num2, num3){
     let temp = num1 > num2? num1: num2;
     return temp > num3? temp: num3;
 }
+function maxOfThreeTest(expected, result) {
+    if (expected === result) {
+        return "TEST SUCCEEDED";
+    } else {
+        return "TEST FAILED.  Expected " + expected + " found " + result;
+    }
+}
+    console.log("Expected output of max(23, 106, 89) is 106  " + maxTest(106, maxOfThree(23, 106, 89)));
 //Question 4
 function isVowel(letter) {
     let vowels = [A, E, I, O, U, a, e, i, o, u];
